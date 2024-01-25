@@ -5,7 +5,11 @@ const path = require("path");
 const cors = require("cors");
 
 // Using Cors
-app.use(cors());
+app.use(cors({
+  origin: 'https://photogram-socialmedia.netlify.app',
+  methods: 'GET, POST, PUT, DELETE, OPTIONS',
+  allowedHeaders: 'Content-Type',
+}));
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({ path: "backend/config/config.env" });
