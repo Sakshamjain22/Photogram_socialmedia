@@ -26,8 +26,8 @@ const post = require("./routes/post");
 const user = require("./routes/user");
 
 // Using Routes
-app.use("https://photogram-731a.onrender.com/api/v1", post);
-app.use("https://photogram-731a.onrender.com/api/v1", user);
+app.use("/api/v1", post);
+app.use("/api/v1", user);
 
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
