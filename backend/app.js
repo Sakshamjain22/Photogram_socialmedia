@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const cookieParser = require("cookie-parser");
 const path = require("path");
+const cors = require("cors");
+
+// Using Cors
+app.use(cors());
+
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config({ path: "backend/config/config.env" });
 }
